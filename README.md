@@ -1,4 +1,4 @@
-# Node.js & Passport Login
+# Shopping App Backend
 
 This is a user login and registration Web App
 and user can save the data of company,branches,clients,brands,products.
