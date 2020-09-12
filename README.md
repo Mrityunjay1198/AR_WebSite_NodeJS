@@ -1,6 +1,9 @@
 # Node.js & Passport Login
 
-This is a user login and registration app using Node.js, Express, Passport, Mongoose, EJS and some other packages.
+This is a user login and registration Web App
+and user can save the data of company,branches,clients,brands,products.
+A dashboard is also included for overall detailed view.
+using Node.js, Express, Passport, Mongoose, EJS and some other packages.
 
 ### Version: 2.0.0
 
