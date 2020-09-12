@@ -1,0 +1,127 @@
+<%- include('navbar'); %>
+<div class="container">
+<div class="row mt-5">
+    <div class="col-md-9 m-auto">
+        <div class="card card-body">
+        <h1 class="text-center mb-3"> Client Details</h1>
+        <% include ./partials/messages %>
+        <form action="/users/add_client" method="POST">
+          <div class="form-group">
+            <label for="clientname">Client Name</label>
+            <input
+              type="text"
+              id="clientname"
+              name="clientname"
+              class="form-control"
+              placeholder="Enter Name"
+              autofocus
+            />
+          </div>
+          <div class="form-group">
+            <label for="clientaddress">Address</label>
+            <input
+              type="text"
+              id="clientaddress"
+              name="clientaddress"
+              class="form-control"
+              placeholder="Enter Address"
+            />
+          </div>
+
+
+          <div class="form-group">
+             <div class="row">
+                 <div class="col-md-6">
+                    <label for="clientcity">City</label>
+                    <input
+                    type="text"
+                    id="clientcity"
+                    name="clientcity"
+                    class="form-control"
+                    placeholder="Enter City"
+                  />
+                 </div>
+                 <div class="col-md-6">
+                    <label for="clientstate">State</label>
+                    <input
+                    type="text"
+                    id="clientstate"
+                    name="clientstate"
+                    class="form-control"
+                    placeholder="Enter State"
+                  />
+                 </div>                 
+             </div>
+             </div>
+
+
+             <div class="form-group">
+                <div class="row">
+                    <div class="col-md-6">
+                       <label for="clientcountry">Country</label>
+                       <select class="custom-select" name="clientcountry">
+                        <option selected="stat">Select Country</option>
+                      <div class="form-group">
+                      <% if(countries.length > 0){ %>
+                        <% for(var i = 0; i < countries.length; i++) { %>
+                        <option value="<%= countries[i].country %>"><%= countries[i].country %></option>
+                        <% }} %>
+                      </select>
+                    </div>
+                    <div class="col-md-6">
+                       <label for="clientmobile">Mobile</label>
+                       <input
+                       type="tel"
+                       id="clientmobile"
+                       name="clientmobile"
+                       class="form-control"
+                       placeholder="Enter Mobile"
+                     />
+                    </div>                 
+                </div>
+                </div>
+             
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6">
+                           <label for="clientuser">Username</label>
+                           <input
+                           type="text"
+                           id="clientuser"
+                           name="clientuser"
+                           class="form-control"
+                           placeholder="Enter username"
+                         />
+                        </div>
+                        <div class="col-md-6">
+                           <label for="clientpass">Password</label>
+                           <input
+                           type="password"
+                           id="clientpass"
+                           name="clientpass"
+                           class="form-control"
+                           placeholder="Enter Password"
+                         />
+                        </div>                 
+                    </div>
+                    </div>
+
+                    <div class="form-group" >
+                          <select class="custom-select" name="status">
+                          <option selected="stat">Select Status</option>
+                          <option value="Enabled">Enabled</option>
+                          <option value="Disabled">Disabled</option>
+                         </select>
+                    </div>
+
+                    
+                  </div>
+          <button type="submit" class="btn btn-primary btn-block">Submit</button>
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <%- include('footer'); %>

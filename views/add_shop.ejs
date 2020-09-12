@@ -1,0 +1,141 @@
+<%- include('navbar'); %>
+<div class="container">
+<div class="row mt-5">
+    <div class="col-md-9 m-auto">
+        <div class="card card-body">
+        <h1 class="text-center mb-3"> Shop Details</h1>
+        <% include ./partials/messages %>
+        <form action="/users/add_shop" method="POST">
+          <div class="form-group">
+            <label for="shopname">Shop Name</label>
+            <input
+              type="text"
+              id="shopname"
+              name="shopname"
+              class="form-control"
+              placeholder="Enter Name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="shopaddress">Address</label>
+            <input
+              type="text"
+              id="shopaddress"
+              name="shopaddress"
+              class="form-control"
+              placeholder="Enter Address"
+            />
+          </div>
+
+
+          <div class="form-group">
+             <div class="row">
+                 <div class="col-md-6">
+                    <label for="shopcity">City</label>
+                    <input
+                    type="text"
+                    id="shopcity"
+                    name="shopcity"
+                    class="form-control"
+                    placeholder="Enter City"
+                  />
+                 </div>
+                 <div class="col-md-6">
+                    <label for="shopstate">State</label>
+                    <input
+                    type="text"
+                    id="shopstate"
+                    name="shopstate"
+                    class="form-control"
+                    placeholder="Enter State"
+                  />
+                 </div>                 
+             </div>
+             </div>
+
+
+             <div class="form-group">
+                <div class="row">
+                    <div class="col-md-6">
+                       <label for="shopcountry">Country</label>
+                       <input
+                       type="text"
+                       id="shopcountry"
+                       name="shopcountry"
+                       class="form-control"
+                       placeholder="Enter Country"
+                     />
+                    </div>
+                    <div class="col-md-6">
+                       <label for="contactname">Contact Person</label>
+                       <input
+                       type="text"
+                       id="contactname"
+                       name="contactname"
+                       class="form-control"
+                       placeholder="Enter name"
+                     />
+                    </div>                 
+                </div>
+                </div>           
+
+                    
+                    <div class="form-group" >
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="shopmobile">Contact Mobile</label>
+                                <input
+                                type="text"
+                                id="shopmobile"
+                                name="shopmobile"
+                                class="form-control"
+                                placeholder="Enter Mobile"
+                              />   
+                                </div>
+                            <div class="col-md-6">
+                                <label for="shopmobile">Select Status</label>
+                            <select class="custom-select" name="shopstatus">
+                            <option selected="stat">Select Status</option>
+                            <option value="Enabled">Enabled</option>
+                            <option value="Disabled">Disabled</option>
+                            </select>    
+                            </div>
+                        </div>
+                    </div>
+                
+                     
+                    
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-6">
+                               <label for="shopuser">Username</label>
+                               <input
+                               type="text"
+                               id="shopuser"
+                               name="shopuser"
+                               class="form-control"
+                               placeholder="Enter username"
+                             />
+                            </div>
+                            <div class="col-md-6">
+                               <label for="shoptpass">Password</label>
+                               <input
+                               type="password"
+                               id="shoptpass"
+                               name="shoptpass"
+                               class="form-control"
+                               placeholder="Enter Password"
+                             />
+                            </div>                 
+                        </div>
+                        </div>
+
+
+          <button type="submit" class="btn btn-primary btn-block">Submit</button>
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <%- include('footer'); %>
